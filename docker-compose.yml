@@ -1,0 +1,17 @@
+services:
+    gvm:
+        image: gvm:latest
+        container_name: gvm
+        hostname: gvm
+        tty: true
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - type: bind
+              source: ./images/
+              target: /home/gvm/images
+              read_only: true
+            - /tmp/.X11-unix:/tmp/.X11-unix
+        environment:
+            - DISPLAY=${DISPLAY}
