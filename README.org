@@ -1,0 +1,13 @@
+There is a Docker image to run Garnet VM («official» Palm OS v5 emulator).
+
+* How to buil image
+
+Run =docker-compose build=
+
+* How to run
+
+Execute =./run-gvm.sh= script.
+
+----
+
+Incomplete — =gvm= starts but no visual confirmation of this.
